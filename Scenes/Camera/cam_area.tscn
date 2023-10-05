@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://j63r2l7s11sc"]
+
+[ext_resource type="Script" path="res://Scripts/Camera/cam_area.gd" id="1_u6hit"]
+
+[node name="CamArea" type="Area3D"]
+collision_layer = 2
+script = ExtResource("1_u6hit")

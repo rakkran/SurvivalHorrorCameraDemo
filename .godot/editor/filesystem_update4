@@ -1,0 +1,5 @@
+res://Scenes/world.tscn
+res://Scenes/Levels/demo_level.tscn
+res://Scenes/Player/player.tscn
+res://Scenes/Camera/cam_area.tscn
+res://Scenes/Camera/camera.tscn

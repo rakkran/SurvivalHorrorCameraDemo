@@ -1,0 +1,22 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1696540427
+icon.svg::CompressedTexture2D::8155522664016096390::1694715008::1694715013::1::::<><>::
+::res://Assets/::1695594005
+::res://Assets/Demo Assets/::1695594005
+kenney_texture_07.png::CompressedTexture2D::530808395026979332::1695155935::1695155951::1::::<><>::
+::res://Assets/Player/::1695594005
+player_man_tex256.png::CompressedTexture2D::6333446539487078530::1695151980::1695151980::1::::<><>::
+::res://Scenes/::1696540156
+world.tscn::PackedScene::5301969117108757230::1696540156::0::1::::<><>::uid://dg6hof2tmq8ug::::res://Scenes/Levels/demo_level.tscn
+::res://Scenes/Camera/::1696540156
+camera.tscn::PackedScene::7927689934471654181::1696540156::0::1::::<><>::res://Scripts/Camera/camera.gd
+cam_area.tscn::PackedScene::697427174014331390::1696540156::0::1::::<><>::res://Scripts/Camera/cam_area.gd
+::res://Scenes/Levels/::1696540156
+demo_level.tscn::PackedScene::7644841148553831058::1696540156::0::1::::<><>::uid://htelpihce2su::::res://Assets/Demo Assets/kenney_texture_07.png<>uid://j63r2l7s11sc::::res://Scenes/Camera/cam_area.tscn<>uid://dk7h5ot6vv0x2::::res://Scenes/Camera/camera.tscn<>uid://d131wac884xl7::::res://Scenes/Player/player.tscn
+::res://Scenes/Player/::1696540156
+player.gd::GDScript::-1::1695522475::0::1::::Player<>CharacterBody3D<>::
+player.tscn::PackedScene::9043592496693898378::1696540156::0::1::::<><>::res://Scenes/Player/player.gd<>uid://cwh766xol03ik::::res://Assets/Player/player_man_tex256.png
+::res://Scripts/::1695594005
+::res://Scripts/Camera/::1695594005
+camera.gd::GDScript::-1::1695521900::0::1::::Camera<>Camera3D<>::
+cam_area.gd::GDScript::-1::1695522311::0::1::::CameraArea<>Area3D<>::

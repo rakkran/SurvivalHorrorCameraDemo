@@ -1,0 +1,111 @@
+[gd_scene load_steps=9 format=3 uid="uid://dg6hof2tmq8ug"]
+
+[ext_resource type="Texture2D" uid="uid://htelpihce2su" path="res://Assets/Demo Assets/kenney_texture_07.png" id="1_0hgvw"]
+[ext_resource type="PackedScene" uid="uid://j63r2l7s11sc" path="res://Scenes/Camera/cam_area.tscn" id="2_eyga0"]
+[ext_resource type="PackedScene" uid="uid://dk7h5ot6vv0x2" path="res://Scenes/Camera/camera.tscn" id="3_1ef6v"]
+[ext_resource type="PackedScene" uid="uid://d131wac884xl7" path="res://Scenes/Player/player.tscn" id="4_lup5r"]
+
+[sub_resource type="Environment" id="Environment_c2o6l"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ofy1m"]
+albedo_texture = ExtResource("1_0hgvw")
+uv1_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xha3o"]
+size = Vector3(5.09317, 1, 9.17226)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ljclo"]
+size = Vector3(5.09317, 1, 12.9874)
+
+[node name="Demo" type="Node3D"]
+
+[node name="env" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="env"]
+transform = Transform3D(0.821289, -0.486635, -0.297778, 0.570513, 0.700541, 0.42867, 0, -0.521948, 0.852977, 0, 4.00834, 4.99996)
+sky_mode = 1
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="env"]
+environment = SubResource("Environment_c2o6l")
+
+[node name="stage" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+use_collision = true
+collision_layer = 4
+collision_mask = 9
+size = Vector3(5.39706, 1, 8.98814)
+material = SubResource("StandardMaterial3D_ofy1m")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.4402, -0.5, 16.9503)
+use_collision = true
+collision_layer = 4
+collision_mask = 9
+size = Vector3(15.4221, 1, 11.5295)
+material = SubResource("StandardMaterial3D_ofy1m")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.89676, -0.5, 0)
+use_collision = true
+collision_layer = 4
+collision_mask = 9
+size = Vector3(6.40429, 1, 4.28328)
+material = SubResource("StandardMaterial3D_ofy1m")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.24307, -0.5, 5.92522)
+use_collision = true
+collision_layer = 4
+collision_mask = 9
+size = Vector3(1.8401, 1, 7.50063)
+material = SubResource("StandardMaterial3D_ofy1m")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="stage"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.9759, -0.5, 10.0572)
+use_collision = true
+collision_layer = 4
+collision_mask = 9
+size = Vector3(1.8401, 1, 7.30022)
+material = SubResource("StandardMaterial3D_ofy1m")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, -0.5, 12.9252)
+use_collision = true
+collision_layer = 4
+collision_mask = 9
+size = Vector3(1.8401, 1, 7.50063)
+material = SubResource("StandardMaterial3D_ofy1m")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="stage"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.2328, -0.5, 17.0572)
+use_collision = true
+collision_layer = 4
+collision_mask = 9
+size = Vector3(1.8401, 1, 7.30022)
+material = SubResource("StandardMaterial3D_ofy1m")
+
+[node name="cameras" type="Node3D" parent="."]
+
+[node name="SpawnZone" parent="cameras" instance=ExtResource("2_eyga0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47279, 0)
+
+[node name="Camera" parent="cameras/SpawnZone" instance=ExtResource("3_1ef6v")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.52748, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cameras/SpawnZone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.20859, 0)
+shape = SubResource("BoxShape3D_xha3o")
+
+[node name="Corridor1" parent="cameras" instance=ExtResource("2_eyga0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.83623, 1.47279, 5.23482)
+
+[node name="Camera" parent="cameras/Corridor1" instance=ExtResource("3_1ef6v")]
+transform = Transform3D(-1, 4.08562e-14, -8.74228e-08, -1.05345e-08, 0.992713, 0.120501, 8.67858e-08, 0.120501, -0.992713, 1.59639, 0.882254, -11.269)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cameras/Corridor1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.20859, -2.52448)
+shape = SubResource("BoxShape3D_ljclo")
+
+[node name="player" parent="." instance=ExtResource("4_lup5r")]

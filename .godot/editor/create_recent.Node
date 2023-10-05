@@ -1,0 +1,10 @@
+WorldEnvironment
+CollisionShape3D
+MeshInstance3D
+CharacterBody3D
+Camera
+Area3D
+Node3D
+CSGBox3D
+DirectionalLight3D
+AnimationPlayer
